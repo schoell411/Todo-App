@@ -53,7 +53,12 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>Todo App</h1>
+				<div className="header">
+					<h1>My Todo List</h1>
+					<button className="delete-button" onClick={this.deleteCompleted}>
+						Delete Completed Tasks
+					</button>
+				</div>
 				<div className="todo-form">
 					<TodoForm addTask={this.addTask} />
 				</div>
@@ -63,7 +68,6 @@ class App extends React.Component {
 						toggleCompleted={this.toggleCompleted}
 					/>
 				</div>
-				<button onClick={this.deleteCompleted}>Delete Completed Tasks</button>
 			</div>
 		);
 	}
